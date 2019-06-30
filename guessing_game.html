@@ -1,0 +1,42 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+var answer = parseInt(Math.random() * 100)
+var user1answer = +prompt("ходит первый игрок, угадайте число от 1 до 100.")
+var user2answer = +prompt("ходит второй игрок, угадайте число от 1 до 100.")
+
+while(answer != user1answer || answer != user2answer){
+	if (answer < user1answer && answer < user2answer){
+		alert("оба ответа слишком большие!")
+	}else if(user1answer < answer && user2answer < answer){
+		alert("оба ответа слишком маленькие!")
+
+	}else if(user1answer > answer && user2answer < answer){
+		alert("первый игрок - слишком большой ответ, второй игрок - слишком маленький ответ.")
+
+	}else if (user1answer < answer && user2answer > answer){
+		alert("первый игрок - слишком маленький ответ, второй игрок - слишком большой ответ.")
+
+	} else if (user1answer == answer) {
+		alert("первый игрок угадал!")
+		alert("игра окончена!")
+		break
+	} else if (user2answer == answer) {
+		alert("второй игрок угадал!")
+		alert("игра окончена!")
+		break
+	} else if (user1answer == answer && user2answer == answer) {
+		alert("все игроки угадали!")
+		alert("игра окончена!")
+		break
+	}
+	user1answer = +prompt("ходит первый игрок")
+	user2answer = +prompt("ходит второй игрок")
+}				
+
+
+
+
+
+
+</script>
